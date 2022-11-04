@@ -72,6 +72,8 @@ flutter:
     - assets/images/on_boarding/
     - assets/images/splash/
     - assets/images/register/get_in/
+    - assets/images/home/slider/
+    - assets/images/home/category/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
