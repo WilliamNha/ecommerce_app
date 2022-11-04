@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/constants/app_color.dart';
+import 'package:ecommerce_app/widgets/register/get_in/custom_sign_in_button.dart';
 import 'package:ecommerce_app/widgets/register/get_in/custom_social_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -94,8 +95,9 @@ class _GetYouInScreenState extends State<GetYouInScreen> {
                 height: 50,
               ),
               CustomSignInButton(
+                buttonTitle: 'Sign in with password',
                 onTap: () {
-                  // context.push('/sign_in');
+                  context.push('/sign_in');
                 },
               ),
               const SizedBox(
@@ -103,18 +105,23 @@ class _GetYouInScreenState extends State<GetYouInScreen> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     'Already have an account ?',
                     style: TextStyle(fontSize: 16, color: Color(0xff868686)),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Sign Up',
-                    style:
-                        TextStyle(fontSize: 16, color: AppColor.primaryColor),
+                  GestureDetector(
+                    onTap: () {
+                      context.push('sign_up');
+                    },
+                    child: const Text(
+                      'Sign Up',
+                      style:
+                          TextStyle(fontSize: 16, color: AppColor.primaryColor),
+                    ),
                   )
                 ],
               ),
@@ -122,34 +129,6 @@ class _GetYouInScreenState extends State<GetYouInScreen> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class CustomSignInButton extends StatelessWidget {
-  const CustomSignInButton({
-    required this.onTap,
-    Key? key,
-  }) : super(key: key);
-  final VoidCallback onTap;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: SizedBox(
-          width: double.infinity,
-          height: 50,
-          child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  primary: AppColor.primaryColor),
-              onPressed: onTap,
-              child: const Text(
-                'Sign in with password',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-              ))),
     );
   }
 }
