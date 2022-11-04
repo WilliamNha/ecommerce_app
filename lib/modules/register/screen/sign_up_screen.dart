@@ -1,11 +1,11 @@
+import 'package:ecommerce_app/widgets/register/custom_brand_logo_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../constants/app_color.dart';
-import '../../../widgets/register/get_in/custom_brand_logo_button.dart';
-import '../../../widgets/register/get_in/custom_sign_in_button.dart';
-import '../../../widgets/register/get_in/custom_sign_in_title.dart';
-import '../../../widgets/register/get_in/custom_textfield_login.dart';
+import '../../../widgets/register/custom_sign_in_button.dart';
+import '../../../widgets/register/custom_sign_in_title.dart';
+import '../../../widgets/register/custom_textfield_login.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});

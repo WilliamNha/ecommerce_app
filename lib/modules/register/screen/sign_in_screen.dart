@@ -1,11 +1,12 @@
 import 'package:ecommerce_app/constants/app_color.dart';
-import 'package:ecommerce_app/widgets/register/get_in/custom_brand_logo_button.dart';
+import 'package:ecommerce_app/widgets/register/custom_sign_in_title.dart';
+import 'package:ecommerce_app/widgets/register/custom_textfield_login.dart';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../widgets/register/get_in/custom_sign_in_button.dart';
-import '../../../widgets/register/get_in/custom_sign_in_title.dart';
-import '../../../widgets/register/get_in/custom_textfield_login.dart';
+import '../../../widgets/register/custom_brand_logo_button.dart';
+import '../../../widgets/register/custom_sign_in_button.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});

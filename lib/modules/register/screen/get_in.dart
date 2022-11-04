@@ -1,9 +1,10 @@
 import 'package:ecommerce_app/constants/app_color.dart';
-import 'package:ecommerce_app/widgets/register/get_in/custom_sign_in_button.dart';
-import 'package:ecommerce_app/widgets/register/get_in/custom_social_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../widgets/register/custom_sign_in_button.dart';
+import '../../../widgets/register/custom_social_button.dart';
 
 class GetYouInScreen extends StatefulWidget {
   const GetYouInScreen({Key? key}) : super(key: key);
