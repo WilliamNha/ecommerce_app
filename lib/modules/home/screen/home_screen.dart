@@ -6,12 +6,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-      ),
       appBar: AppBar(
         title: const Text('Ecommerce'),
+      ),
+      body: const SizedBox(
+        width: double.infinity,
+        height: double.infinity,
       ),
     );
   }

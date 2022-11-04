@@ -115,7 +115,7 @@ class _GetYouInScreenState extends State<GetYouInScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      context.push('sign_up');
+                      context.push('/sign_up');
                     },
                     child: const Text(
                       'Sign Up',

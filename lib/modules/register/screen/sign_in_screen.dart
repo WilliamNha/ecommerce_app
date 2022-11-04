@@ -1,8 +1,10 @@
 import 'package:ecommerce_app/constants/app_color.dart';
+import 'package:ecommerce_app/widgets/register/get_in/custom_brand_logo_button.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../widgets/register/get_in/custom_sign_in_button.dart';
+import '../../../widgets/register/get_in/custom_sign_in_title.dart';
 import '../../../widgets/register/get_in/custom_textfield_login.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -45,15 +47,8 @@ class _SignInScreenState extends State<SignInScreen> {
               const SizedBox(
                 height: 10,
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 20),
-                child: Text(
-                  'Sign Up Your Account',
-                  style: TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      color: AppColor.primaryColor),
-                ),
+              const CustomSignInTitle(
+                title: 'Login to your account',
               ),
               const SizedBox(
                 height: 30,
@@ -72,18 +67,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: CustomTextfieldLogin(
                   isPasswordField: true,
-                  hintText: 'New Password',
-                  prefixIconData: Icons.lock,
-                ),
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: CustomTextfieldLogin(
-                  isPasswordField: true,
-                  hintText: 'Confirm Password',
+                  hintText: 'password',
                   prefixIconData: Icons.lock,
                 ),
               ),
@@ -132,12 +116,80 @@ class _SignInScreenState extends State<SignInScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CustomSignInButton(
-                  onTap: () {},
-                  buttonTitle: 'Sign Up',
+                  onTap: () {
+                    context.go('/home');
+                  },
+                  buttonTitle: 'Sign in',
                 ),
               ),
               const SizedBox(
                 height: 30,
+              ),
+              const Center(
+                child: Text(
+                  'Forget the password?',
+                  style: TextStyle(color: AppColor.primaryColor, fontSize: 16),
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              const Center(
+                child: Text(
+                  'Or continue with',
+                  style: TextStyle(color: Color(0xff5A5A5A), fontSize: 14),
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  CustomBrandLogoButton(
+                    isSvgImage: true,
+                    imagePath:
+                        'assets/images/register/get_in/facebook_logo.svg',
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  CustomBrandLogoButton(
+                    imagePath: 'assets/images/register/get_in/google_logo.png',
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  CustomBrandLogoButton(
+                    isSvgImage: true,
+                    imagePath: 'assets/images/register/get_in/apple_logo.svg',
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Already have an account ?',
+                    style: TextStyle(fontSize: 16, color: Color(0xff868686)),
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      context.push('/sign_up');
+                    },
+                    child: const Text(
+                      'Sign Up',
+                      style:
+                          TextStyle(fontSize: 16, color: AppColor.primaryColor),
+                    ),
+                  )
+                ],
               ),
             ]),
           ),

@@ -23,9 +23,10 @@ class CustomSignInButton extends StatelessWidget {
                   ),
                   backgroundColor: AppColor.primaryColor),
               onPressed: onTap,
-              child: const Text(
-                'Sign in with password',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              child: Text(
+                buttonTitle,
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ))),
     );
   }
