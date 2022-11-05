@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/modules/home/screen/bottom_naviation_bar.dart';
 import 'package:ecommerce_app/modules/home/screen/home_screen.dart';
+import 'package:ecommerce_app/modules/home/screen/view_product_detail.dart';
 import 'package:ecommerce_app/modules/on_boarding/screen/on_boarding_screen.dart';
 import 'package:ecommerce_app/modules/register/screen/get_in.dart';
 import 'package:ecommerce_app/modules/register/screen/sign_in_screen.dart';
@@ -51,6 +52,12 @@ final GoRouter router = GoRouter(
       path: '/bottom_navigation',
       builder: (BuildContext context, GoRouterState state) {
         return const BottomNavigationScreen();
+      },
+    ),
+    GoRoute(
+      path: '/view_product_detail',
+      builder: (BuildContext context, GoRouterState state) {
+        return const ViewProductDetail();
       },
     ),
   ],

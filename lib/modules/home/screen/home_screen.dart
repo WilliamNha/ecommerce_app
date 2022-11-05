@@ -7,6 +7,7 @@ import 'package:ecommerce_app/widgets/home/custom_product_card.dart';
 import 'package:ecommerce_app/widgets/home/offer_slider.dart';
 import 'package:ecommerce_app/widgets/home/search_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -142,8 +143,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             crossAxisSpacing: 15),
                     itemCount: productModelTypeList[currentIndex].length,
                     itemBuilder: (BuildContext context, int index) {
-                      return CustomCardProduct(
-                        productModel: productModelTypeList[currentIndex][index],
+                      return GestureDetector(
+                        onTap: () {
+                          context.push('/view_product_detail');
+                        },
+                        child: CustomCardProduct(
+                          productModel: productModelTypeList[currentIndex]
+                              [index],
+                        ),
                       );
                     },
                   ),
