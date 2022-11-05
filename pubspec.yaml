@@ -76,6 +76,12 @@ flutter:
     - assets/images/home/category/
     - assets/images/home/product/clothes/
     - assets/images/home/product/shoes/
+    - assets/images/home/product/bags/
+    - assets/images/home/product/electronic/
+    - assets/images/home/product/watch/
+    - assets/images/home/product/jewelry/
+    - assets/images/home/product/kitchen/
+    - assets/images/home/product/toys/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
