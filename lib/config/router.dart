@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/modules/home/screen/bottom_naviation_bar.dart';
 import 'package:ecommerce_app/modules/home/screen/home_screen.dart';
 import 'package:ecommerce_app/modules/on_boarding/screen/on_boarding_screen.dart';
 import 'package:ecommerce_app/modules/register/screen/get_in.dart';
@@ -44,6 +45,12 @@ final GoRouter router = GoRouter(
       path: '/sign_up',
       builder: (BuildContext context, GoRouterState state) {
         return const SignUpScreen();
+      },
+    ),
+    GoRoute(
+      path: '/bottom_navigation',
+      builder: (BuildContext context, GoRouterState state) {
+        return const BottomNavigationScreen();
       },
     ),
   ],

@@ -8,11 +8,34 @@ List imageSliderList = [
 
 List categoryIconList = [
   'assets/images/home/category/shirt.svg',
-  'assets/images/home/category/shirt.svg',
-  'assets/images/home/category/shirt.svg',
-  'assets/images/home/category/shirt.svg',
-  'assets/images/home/category/shirt.svg',
-  'assets/images/home/category/shirt.svg',
-  'assets/images/home/category/shirt.svg',
-  'assets/images/home/category/shirt.svg',
+  'assets/images/home/category/shoes.svg',
+  'assets/images/home/category/bag.svg',
+  'assets/images/home/category/electronic.svg',
+  'assets/images/home/category/watch.svg',
+  'assets/images/home/category/jewelry.svg',
+  'assets/images/home/category/kitchen.svg',
+  'assets/images/home/category/toy.svg',
+];
+
+List categoryTitleList = [
+  'Clothes',
+  'Shoes',
+  'Bags',
+  'Electronic',
+  'Watches',
+  'Jewelrys',
+  'Kitchens',
+  'Toys',
+];
+
+List chipList = [
+  'All',
+  'Clothes',
+  'Shoes',
+  'Bags',
+  'Electronic',
+  'Watches',
+  'Jewelrys',
+  'Kitchens',
+  'Toys'
 ];

@@ -118,7 +118,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CustomSignInButton(
                   onTap: () {
-                    context.go('/home');
+                    context.go('/bottom_navigation');
                   },
                   buttonTitle: 'Sign in',
                 ),

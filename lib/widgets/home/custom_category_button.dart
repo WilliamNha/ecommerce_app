@@ -24,6 +24,8 @@ class CustomCategoryButton extends StatelessWidget {
             child: SvgPicture.asset(
               imagePath,
               color: AppColor.primaryColor,
+              width: 20,
+              height: 20,
             ),
           ),
         ),
