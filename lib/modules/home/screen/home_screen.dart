@@ -3,6 +3,7 @@ import 'package:ecommerce_app/modules/home/model/home_model.dart';
 import 'package:ecommerce_app/widgets/home/custom_category_button.dart';
 import 'package:ecommerce_app/widgets/home/custom_chip.dart';
 import 'package:ecommerce_app/widgets/home/custom_label_title.dart';
+import 'package:ecommerce_app/widgets/home/custom_product_card.dart';
 import 'package:ecommerce_app/widgets/home/offer_slider.dart';
 import 'package:ecommerce_app/widgets/home/search_bar.dart';
 import 'package:flutter/material.dart';
@@ -125,6 +126,27 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ));
                   }).toList()),
+                ),
+                //display product list
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  child: GridView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            mainAxisExtent: 270,
+                            mainAxisSpacing: 15,
+                            crossAxisSpacing: 15),
+                    itemCount: productModelTypeList[currentIndex].length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return CustomCardProduct(
+                        productModel: productModelTypeList[currentIndex][index],
+                      );
+                    },
+                  ),
                 ),
               ],
             ),

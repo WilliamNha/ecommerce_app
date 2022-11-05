@@ -74,6 +74,8 @@ flutter:
     - assets/images/register/get_in/
     - assets/images/home/slider/
     - assets/images/home/category/
+    - assets/images/home/product/clothes/
+    - assets/images/home/product/shoes/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

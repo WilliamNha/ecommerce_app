@@ -39,3 +39,83 @@ List chipList = [
   'Kitchens',
   'Toys'
 ];
+
+class ProductModel {
+  String? title;
+  String? description;
+  double? price;
+  String? rating;
+  int? soldAmount;
+  String? image;
+
+  ProductModel({
+    this.title,
+    this.description,
+    this.price,
+    this.rating,
+    this.soldAmount,
+    this.image,
+  });
+}
+
+List productModelTypeList = [
+  [],
+  clothesProductModelList,
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
+List clothesProductModelList = [
+  ProductModel(
+    title: 'Venesa Long Shirt',
+    description: "New product Arrived",
+    price: 18,
+    rating: '4.2',
+    soldAmount: 23,
+    image: 'assets/images/home/product/clothes/clothes1.jpeg',
+  ),
+  ProductModel(
+    title: 'Werolla Cardigans',
+    description: "New product Arrived",
+    price: 29,
+    rating: '4.5',
+    soldAmount: 70,
+    image: 'assets/images/home/product/clothes/clothes2.jpeg',
+  ),
+  ProductModel(
+    title: 'Viyara Ma Blazer',
+    description: "New product Arrived",
+    price: 35,
+    rating: '4.6',
+    soldAmount: 50,
+    image: 'assets/images/home/product/clothes/clothes3.jpeg',
+  ),
+  ProductModel(
+    title: 'Moco Blue Suit',
+    description: "New product Arrived",
+    price: 22,
+    rating: '4.8',
+    soldAmount: 502,
+    image: 'assets/images/home/product/clothes/clothes4.jpeg',
+  ),
+  ProductModel(
+    title: 'Viyara Ma Blazer',
+    description: "New product Arrived",
+    price: 13,
+    rating: '4.2',
+    soldAmount: 200,
+    image: 'assets/images/home/product/clothes/clothes5.jpeg',
+  ),
+  ProductModel(
+    title: 'Moco Blue Suit',
+    description: "New product Arrived",
+    price: 23,
+    rating: '4.5',
+    soldAmount: 300,
+    image: 'assets/images/home/product/clothes/clothes6.jpeg',
+  ),
+];
