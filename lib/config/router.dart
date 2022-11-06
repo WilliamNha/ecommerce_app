@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/modules/home/model/home_model.dart';
 import 'package:ecommerce_app/modules/home/screen/bottom_naviation_bar.dart';
 import 'package:ecommerce_app/modules/home/screen/home_screen.dart';
+import 'package:ecommerce_app/modules/home/screen/view_category_detail.dart';
 import 'package:ecommerce_app/modules/home/screen/view_product_detail.dart';
 import 'package:ecommerce_app/modules/on_boarding/screen/on_boarding_screen.dart';
 import 'package:ecommerce_app/modules/register/screen/get_in.dart';
@@ -60,6 +61,16 @@ final GoRouter router = GoRouter(
       builder: (BuildContext context, GoRouterState state) {
         return ViewProductDetail(
           productModel: state.extra as ProductModel,
+        );
+      },
+    ),
+    GoRoute(
+      name: 'ViewCategoryDetail',
+      path: '/view_category_detail/:indexx/:title',
+      builder: (BuildContext context, GoRouterState state) {
+        return ViewCategoryDetailScreen(
+          title: state.params['title'],
+          indexx: int.parse(state.params['indexx']!),
         );
       },
     ),

@@ -85,6 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   rightTitle: 'See All',
                 ),
                 const OfferSlider(),
+                // category list
                 GridView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
@@ -95,9 +96,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     itemCount: categoryIconList.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return CustomCategoryButton(
-                        imagePath: categoryIconList[index],
-                        title: categoryTitleList[index],
+                      return GestureDetector(
+                        onTap: () {
+                          context.pushNamed('ViewCategoryDetail', params: {
+                            "indexx": index.toString(),
+                            'title': categoryTitleList[index],
+                          });
+                        },
+                        child: CustomCategoryButton(
+                          imagePath: categoryIconList[index],
+                          title: categoryTitleList[index],
+                        ),
                       );
                     }),
                 const SizedBox(
