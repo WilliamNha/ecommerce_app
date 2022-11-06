@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/modules/home/model/home_model.dart';
 import 'package:ecommerce_app/modules/home/screen/bottom_naviation_bar.dart';
 import 'package:ecommerce_app/modules/home/screen/home_screen.dart';
 import 'package:ecommerce_app/modules/home/screen/view_product_detail.dart';
@@ -57,7 +58,9 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/view_product_detail',
       builder: (BuildContext context, GoRouterState state) {
-        return const ViewProductDetail();
+        return ViewProductDetail(
+          productModel: state.extra as ProductModel,
+        );
       },
     ),
   ],

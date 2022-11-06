@@ -145,7 +145,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemBuilder: (BuildContext context, int index) {
                       return GestureDetector(
                         onTap: () {
-                          context.push('/view_product_detail');
+                          context.push('/view_product_detail',
+                              extra: productModelTypeList[currentIndex][index]);
                         },
                         child: CustomCardProduct(
                           productModel: productModelTypeList[currentIndex]
