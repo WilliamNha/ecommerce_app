@@ -69,6 +69,39 @@ class CartItemModel {
   CartItemModel({this.image, this.title, this.size, this.color, this.price});
 }
 
+List cartItemList = [
+  CartItemModel(
+      title: 'Werolla Cadigans',
+      color: Colors.grey,
+      size: 'M',
+      price: '180',
+      image: 'assets/images/home/product/clothes/clothes2.jpeg'),
+  CartItemModel(
+      title: 'Suga Leather',
+      color: Colors.black,
+      size: 'S',
+      price: '400',
+      image: 'assets/images/home/product/shoes/shoes2.jpeg'),
+  CartItemModel(
+      title: 'Vinia Calora',
+      color: Colors.orange,
+      size: 'M',
+      price: '340',
+      image: 'assets/images/home/product/bags/bag2.jpeg'),
+  CartItemModel(
+      title: 'Werolla Cadigans',
+      color: Colors.green,
+      size: 'L',
+      price: '250',
+      image: 'assets/images/home/product/electronic/electronic2.jpeg'),
+  CartItemModel(
+      title: 'Suga Vangora',
+      color: Colors.yellow,
+      size: 'L',
+      price: '368',
+      image: 'assets/images/home/product/shoes/shoes3.jpeg'),
+];
+
 List productModelTypeList = [
   allProductModelList,
   clothesProductModelList,

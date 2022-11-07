@@ -51,9 +51,9 @@ class CustomCartCard extends StatelessWidget {
                     style: const TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: 17),
+                        fontSize: 16),
                   ),
-                  const Spacer(),
+                  // const Spacer(),
                   GestureDetector(
                       onTap: () {
                         showModalBottomSheet(

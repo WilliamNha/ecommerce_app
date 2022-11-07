@@ -6,39 +6,6 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../home/model/home_model.dart';
 
-List cartItemList = [
-  CartItemModel(
-      title: 'Werolla Cadigans',
-      color: Colors.grey,
-      size: 'M',
-      price: '180',
-      image: 'assets/images/home/product/clothes/clothes2.jpeg'),
-  CartItemModel(
-      title: 'Suga Leather Shoes',
-      color: Colors.black,
-      size: 'S',
-      price: '400',
-      image: 'assets/images/home/product/shoes/shoes2.jpeg'),
-  CartItemModel(
-      title: 'Vinia Calora',
-      color: Colors.orange,
-      size: 'M',
-      price: '340',
-      image: 'assets/images/home/product/bags/bag2.jpeg'),
-  CartItemModel(
-      title: 'Werolla Cadigans',
-      color: Colors.green,
-      size: 'L',
-      price: '250',
-      image: 'assets/images/home/product/electronic/electronic2.jpeg'),
-  CartItemModel(
-      title: 'Suga Leather Vangora',
-      color: Colors.yellow,
-      size: 'L',
-      price: '368',
-      image: 'assets/images/home/product/shoes/shoes3.jpeg'),
-];
-
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
 
@@ -56,14 +23,14 @@ class CartScreen extends StatelessWidget {
             ),
           )
         ],
-        leadingWidth: 200,
+        leadingWidth: 210,
         leading: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
             child: SvgPicture.asset(
               'assets/images/splash/logo.svg',
-              width: 22,
-              height: 22,
+              width: 21,
+              height: 21,
             ),
           ),
           const Text(
