@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/modules/cart/screen/cart_screen.dart';
 import 'package:ecommerce_app/modules/home/model/home_model.dart';
 import 'package:ecommerce_app/modules/home/screen/bottom_naviation_bar.dart';
 import 'package:ecommerce_app/modules/home/screen/home_screen.dart';
@@ -72,6 +73,12 @@ final GoRouter router = GoRouter(
           title: state.params['title'],
           indexx: int.parse(state.params['indexx']!),
         );
+      },
+    ),
+    GoRoute(
+      path: '/cart_screen',
+      builder: (BuildContext context, GoRouterState state) {
+        return const CartScreen();
       },
     ),
   ],

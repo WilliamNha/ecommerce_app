@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/constants/app_color.dart';
+import 'package:ecommerce_app/modules/cart/screen/cart_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'home_screen.dart';
@@ -14,11 +15,7 @@ class BottomNavigationScreenState extends State<BottomNavigationScreen> {
   var currentIndex = 0;
   List<Widget> widgetOption = [
     const HomeScreen(),
-    Container(
-      color: Colors.red,
-      width: double.infinity,
-      height: double.infinity,
-    ),
+    const CartScreen(),
     Container(
       color: Colors.yellow,
       width: double.infinity,
@@ -55,6 +52,8 @@ class BottomNavigationScreenState extends State<BottomNavigationScreen> {
           borderRadius: BorderRadius.circular(50),
         ),
         child: ListView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
           itemCount: 5,
           scrollDirection: Axis.horizontal,
           padding: EdgeInsets.symmetric(horizontal: displayWidth * .02),
@@ -69,26 +68,6 @@ class BottomNavigationScreenState extends State<BottomNavigationScreen> {
             highlightColor: Colors.transparent,
             child: Stack(
               children: [
-                // AnimatedContainer(
-                //   duration: const Duration(seconds: 1),
-                //   curve: Curves.fastLinearToSlowEaseIn,
-                //   width: index == currentIndex
-                //       ? displayWidth * .15
-                //       : displayWidth * .20,
-                //   alignment: Alignment.center,
-                //   child: AnimatedContainer(
-                //     duration: const Duration(seconds: 1),
-                //     curve: Curves.fastLinearToSlowEaseIn,
-                //     height: index == currentIndex ? displayWidth * .20 : 0,
-                //     width: index == currentIndex ? displayWidth * .15 : 0,
-                //     decoration: BoxDecoration(
-                //       color: index == currentIndex
-                //           ? LightModeColorApp.primaryColor.withOpacity(.2)
-                //           : Colors.transparent,
-                //       borderRadius: BorderRadius.circular(25),
-                //     ),
-                //   ),
-                // ),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: AnimatedContainer(
@@ -116,30 +95,6 @@ class BottomNavigationScreenState extends State<BottomNavigationScreen> {
                             ),
                           ],
                         ),
-                        // Column(
-                        //   crossAxisAlignment: CrossAxisAlignment.start,
-                        //   children: [
-                        //     AnimatedContainer(
-                        //       duration: const Duration(seconds: 1),
-                        //       curve: Curves.fastLinearToSlowEaseIn,
-                        //     ),
-                        //     AnimatedOpacity(
-                        //       opacity: index == currentIndex ? 1 : 0,
-                        //       duration: const Duration(seconds: 1),
-                        //       curve: Curves.fastLinearToSlowEaseIn,
-                        //       child: Text(
-                        //         index == currentIndex
-                        //             ? listOfStrings[index]
-                        //             : '',
-                        //         style: const TextStyle(
-                        //           color: LightModeColorApp.primaryColor,
-                        //           fontWeight: FontWeight.w600,
-                        //           fontSize: 15,
-                        //         ),
-                        //       ),
-                        //     ),
-                        //   ],
-                        // ),
                       ],
                     ),
                   ),

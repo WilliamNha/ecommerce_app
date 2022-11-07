@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ecommerce_app/constants/app_color.dart';
 import 'package:ecommerce_app/modules/home/model/home_model.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -69,8 +70,8 @@ class _OfferSliderState extends State<OfferSlider> {
             onDotClicked: (index) {
               controller.animateToPage(index);
             },
-            effect: const ExpandingDotsEffect(
-              activeDotColor: Colors.yellow,
+            effect: ExpandingDotsEffect(
+              activeDotColor: AppColor.primaryColor.withOpacity(0.6),
               dotColor: Colors.white,
               dotHeight: 10,
               dotWidth: 10,

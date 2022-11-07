@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 List imageSliderList = [
   'assets/images/home/slider/controller.jpeg',
   'assets/images/home/slider/headphone.jpeg',
@@ -56,6 +58,15 @@ class ProductModel {
     this.soldAmount,
     this.image,
   });
+}
+
+class CartItemModel {
+  String? image;
+  String? title;
+  String? size;
+  Color? color;
+  String? price;
+  CartItemModel({this.image, this.title, this.size, this.color, this.price});
 }
 
 List productModelTypeList = [

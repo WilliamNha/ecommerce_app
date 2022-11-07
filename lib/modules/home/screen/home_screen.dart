@@ -7,6 +7,7 @@ import 'package:ecommerce_app/widgets/home/custom_product_card.dart';
 import 'package:ecommerce_app/widgets/home/offer_slider.dart';
 import 'package:ecommerce_app/widgets/home/search_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -30,11 +31,14 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         leadingWidth: 100,
         leading: Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Container(
-            width: 80,
-            height: 30,
-            color: Colors.black12,
+          padding: const EdgeInsets.only(left: 10, top: 12, bottom: 12),
+          child: SizedBox(
+            // width: 80,
+            height: 20,
+            // color: Colors.black12,
+            child: SvgPicture.asset(
+              'assets/images/splash/logo.svg',
+            ),
           ),
         ),
         elevation: 0,
