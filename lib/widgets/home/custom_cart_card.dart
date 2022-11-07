@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/constants/app_color.dart';
 import 'package:ecommerce_app/modules/home/model/home_model.dart';
+import 'package:ecommerce_app/widgets/register/custom_sign_in_button.dart';
 import 'package:flutter/material.dart';
 
 class CustomCartCard extends StatelessWidget {
@@ -53,7 +54,91 @@ class CustomCartCard extends StatelessWidget {
                         fontSize: 17),
                   ),
                   const Spacer(),
-                  const Icon(Icons.delete_outline)
+                  GestureDetector(
+                      onTap: () {
+                        showModalBottomSheet(
+                            backgroundColor: Colors.transparent,
+                            context: context,
+                            builder: (contextx) {
+                              return Container(
+                                padding:
+                                    const EdgeInsets.only(top: 20, bottom: 20),
+                                width: double.infinity,
+                                height: 350,
+                                decoration: const BoxDecoration(
+                                    color: Color(0xffF9FAFB),
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(15),
+                                        topRight: Radius.circular(15))),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    const Text(
+                                      'Remove From Cart?',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    const SizedBox(
+                                      height: 30,
+                                    ),
+                                    CustomCartCard(
+                                        cartItemModel: cartItemModel),
+                                    const SizedBox(
+                                      height: 30,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Expanded(
+                                            child: Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 20),
+                                          child: GestureDetector(
+                                            onTap: () {
+                                              Navigator.pop(contextx);
+                                            },
+                                            child: Container(
+                                              height: 50,
+                                              width: double.infinity,
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  color: Colors.white,
+                                                  border: Border.all(
+                                                      color:
+                                                          AppColor.primaryColor,
+                                                      width: 1)),
+                                              child: const Center(
+                                                  child: Text(
+                                                'Cancel',
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    color:
+                                                        AppColor.primaryColor,
+                                                    fontSize: 16),
+                                              )),
+                                            ),
+                                          ),
+                                        )),
+                                        Expanded(
+                                            child: CustomSignInButton(
+                                          onTap: () {},
+                                          buttonTitle: "Yes, Remove",
+                                        )),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              );
+                            });
+                      },
+                      child: const Icon(Icons.delete_outline))
                 ],
               ),
               const SizedBox(
