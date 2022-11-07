@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 
 class CustomCartCard extends StatelessWidget {
   final CartItemModel cartItemModel;
+  final bool hasDeleteButton;
   const CustomCartCard({
     required this.cartItemModel,
+    this.hasDeleteButton = false,
     Key? key,
   }) : super(key: key);
 
@@ -53,92 +55,96 @@ class CustomCartCard extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontSize: 16),
                   ),
-                  // const Spacer(),
-                  GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                            backgroundColor: Colors.transparent,
-                            context: context,
-                            builder: (contextx) {
-                              return Container(
-                                padding:
-                                    const EdgeInsets.only(top: 20, bottom: 20),
-                                width: double.infinity,
-                                height: 350,
-                                decoration: const BoxDecoration(
-                                    color: Color(0xffF9FAFB),
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(15),
-                                        topRight: Radius.circular(15))),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    const Text(
-                                      'Remove From Cart?',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 30,
-                                    ),
-                                    CustomCartCard(
-                                        cartItemModel: cartItemModel),
-                                    const SizedBox(
-                                      height: 30,
-                                    ),
-                                    Row(
+                  hasDeleteButton
+                      ? GestureDetector(
+                          onTap: () {
+                            showModalBottomSheet(
+                                backgroundColor: Colors.transparent,
+                                context: context,
+                                builder: (contextx) {
+                                  return Container(
+                                    padding: const EdgeInsets.only(
+                                        top: 20, bottom: 20),
+                                    width: double.infinity,
+                                    height: 350,
+                                    decoration: const BoxDecoration(
+                                        color: Color(0xffF9FAFB),
+                                        borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(15),
+                                            topRight: Radius.circular(15))),
+                                    child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
                                       children: [
-                                        Expanded(
-                                            child: Padding(
-                                          padding:
-                                              const EdgeInsets.only(left: 20),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              Navigator.pop(contextx);
-                                            },
-                                            child: Container(
-                                              height: 50,
-                                              width: double.infinity,
-                                              decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
-                                                  color: Colors.white,
-                                                  border: Border.all(
-                                                      color:
-                                                          AppColor.primaryColor,
-                                                      width: 1)),
-                                              child: const Center(
-                                                  child: Text(
-                                                'Cancel',
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.bold,
-                                                    color:
-                                                        AppColor.primaryColor,
-                                                    fontSize: 16),
-                                              )),
-                                            ),
-                                          ),
-                                        )),
-                                        Expanded(
-                                            child: CustomSignInButton(
-                                          onTap: () {},
-                                          buttonTitle: "Yes, Remove",
-                                        )),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        const Text(
+                                          'Remove From Cart?',
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        const SizedBox(
+                                          height: 30,
+                                        ),
+                                        CustomCartCard(
+                                            cartItemModel: cartItemModel),
+                                        const SizedBox(
+                                          height: 30,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            Expanded(
+                                                child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 20),
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  Navigator.pop(contextx);
+                                                },
+                                                child: Container(
+                                                  height: 50,
+                                                  width: double.infinity,
+                                                  decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10),
+                                                      color: Colors.white,
+                                                      border: Border.all(
+                                                          color: AppColor
+                                                              .primaryColor,
+                                                          width: 1)),
+                                                  child: const Center(
+                                                      child: Text(
+                                                    'Cancel',
+                                                    style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        color: AppColor
+                                                            .primaryColor,
+                                                        fontSize: 16),
+                                                  )),
+                                                ),
+                                              ),
+                                            )),
+                                            Expanded(
+                                                child: CustomSignInButton(
+                                              onTap: () {},
+                                              buttonTitle: "Yes, Remove",
+                                            )),
+                                          ],
+                                        )
                                       ],
-                                    )
-                                  ],
-                                ),
-                              );
-                            });
-                      },
-                      child: const Icon(Icons.delete_outline))
+                                    ),
+                                  );
+                                });
+                          },
+                          child: const Icon(Icons.delete_outline))
+                      : const SizedBox(),
                 ],
               ),
               const SizedBox(

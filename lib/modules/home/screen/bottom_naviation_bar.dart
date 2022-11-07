@@ -1,5 +1,8 @@
 import 'package:ecommerce_app/constants/app_color.dart';
 import 'package:ecommerce_app/modules/cart/screen/cart_screen.dart';
+import 'package:ecommerce_app/modules/order/screen/order_screen.dart';
+import 'package:ecommerce_app/modules/profile/screen/profile_screen.dart';
+import 'package:ecommerce_app/modules/wallet/screen/wallet_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'home_screen.dart';
@@ -16,21 +19,9 @@ class BottomNavigationScreenState extends State<BottomNavigationScreen> {
   List<Widget> widgetOption = [
     const HomeScreen(),
     const CartScreen(),
-    Container(
-      color: Colors.yellow,
-      width: double.infinity,
-      height: double.infinity,
-    ),
-    Container(
-      color: Colors.green,
-      width: double.infinity,
-      height: double.infinity,
-    ),
-    Container(
-      color: Colors.blue,
-      width: double.infinity,
-      height: double.infinity,
-    ),
+    const OrderScreen(),
+    const WalletScreen(),
+    const ProfileScreen()
   ];
   @override
   Widget build(BuildContext context) {

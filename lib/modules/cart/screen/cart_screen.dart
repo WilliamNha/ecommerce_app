@@ -57,6 +57,7 @@ class CartScreen extends StatelessWidget {
                     ),
                     for (var item in cartItemList)
                       CustomCartCard(
+                        hasDeleteButton: true,
                         cartItemModel: item,
                       ),
                   ],
@@ -70,8 +71,10 @@ class CartScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 20, left: 30, right: 20),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
                           Text(
                             'Total Price',
@@ -82,7 +85,7 @@ class CartScreen extends StatelessWidget {
                             height: 5,
                           ),
                           Text(
-                            '\$1200',
+                            '\$1200.00',
                             style: TextStyle(
                                 fontSize: 20,
                                 color: AppColor.primaryColor,

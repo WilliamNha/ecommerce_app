@@ -79,6 +79,7 @@ class _ViewProductDetailState extends State<ViewProductDetail> {
                       const SizedBox(
                         height: 20,
                       ),
+                      //===============  title and add favorite
                       Row(
                         children: [
                           Padding(
@@ -105,7 +106,7 @@ class _ViewProductDetailState extends State<ViewProductDetail> {
                       const SizedBox(
                         height: 20,
                       ),
-                      //sold and rating row
+                      //===============  sold and rating row
                       Row(
                         children: [
                           Container(
@@ -153,7 +154,7 @@ class _ViewProductDetailState extends State<ViewProductDetail> {
                       const SizedBox(
                         height: 30,
                       ),
-                      // ======   description part
+                      // ==============   description part
                       const Padding(
                         padding: EdgeInsets.only(left: 20, bottom: 15),
                         child: Text(
@@ -173,6 +174,7 @@ class _ViewProductDetailState extends State<ViewProductDetail> {
                       const SizedBox(
                         height: 30,
                       ),
+                      //================== size part
                       const Padding(
                         padding: EdgeInsets.only(left: 20, bottom: 15),
                         child: Text(
@@ -195,10 +197,11 @@ class _ViewProductDetailState extends State<ViewProductDetail> {
                             ),
                         ],
                       ),
+
                       const SizedBox(
                         height: 30,
                       ),
-                      //======  color part
+                      //=================== color part
                       const Padding(
                         padding: EdgeInsets.only(left: 20, bottom: 15),
                         child: Text(
@@ -224,7 +227,7 @@ class _ViewProductDetailState extends State<ViewProductDetail> {
                             ),
                         ],
                       ),
-                      //======  color part
+                      //==================  quantity part
                       const SizedBox(
                         height: 30,
                       ),
@@ -287,7 +290,7 @@ class _ViewProductDetailState extends State<ViewProductDetail> {
             const SizedBox(
               height: 20,
             ),
-            //======  Total Price
+            //===================  Total Price
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
