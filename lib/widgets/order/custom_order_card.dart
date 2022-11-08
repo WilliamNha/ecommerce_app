@@ -39,7 +39,7 @@ class CustomOrderCard extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          width: 30,
+          width: 20,
         ),
         Expanded(
           child: Column(
@@ -137,8 +137,9 @@ class CustomOrderCard extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20),
                         child: CustomSignInButton(
-                            fontSize: 13,
-                            isTextBold: false,
+                            height: 50,
+                            fontSize: 10,
+                            isTextBold: true,
                             onTap: () {},
                             buttonTitle: buttonText),
                       ),

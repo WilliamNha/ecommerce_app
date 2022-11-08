@@ -27,11 +27,14 @@ class CustomSignInButton extends StatelessWidget {
                 ),
                 backgroundColor: AppColor.primaryColor),
             onPressed: onTap,
-            child: Text(
-              buttonTitle,
-              style: TextStyle(
-                  fontWeight: isTextBold ? FontWeight.bold : FontWeight.normal,
-                  fontSize: fontSize),
+            child: Center(
+              child: Text(
+                buttonTitle,
+                style: TextStyle(
+                    fontWeight:
+                        isTextBold ? FontWeight.bold : FontWeight.normal,
+                    fontSize: fontSize),
+              ),
             )));
   }
 }

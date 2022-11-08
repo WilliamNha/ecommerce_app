@@ -38,7 +38,7 @@ class CustomCartCard extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          width: 30,
+          width: 20,
         ),
         Expanded(
           child: Column(
@@ -165,21 +165,21 @@ class CustomCartCard extends StatelessWidget {
                         color: cartItemModel.color!, shape: BoxShape.circle),
                   ),
                   const SizedBox(
-                    width: 10,
+                    width: 5,
                   ),
                   const Text(
                     'Color',
                     style: TextStyle(color: Colors.grey, fontSize: 13),
                   ),
                   const SizedBox(
-                    width: 10,
+                    width: 5,
                   ),
                   const Text(
                     '|',
                     style: TextStyle(color: Colors.grey, fontSize: 13),
                   ),
                   const SizedBox(
-                    width: 10,
+                    width: 5,
                   ),
                   Text(
                     'Size ${cartItemModel.size}',
@@ -202,6 +202,9 @@ class CustomCartCard extends StatelessWidget {
                     ),
                     const Spacer(),
                     Container(
+                      margin: const EdgeInsets.only(
+                        left: 20,
+                      ),
                       // width: 50,
                       decoration: BoxDecoration(
                           color: const Color(0xffF2F2F2),
@@ -211,14 +214,14 @@ class CustomCartCard extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
                             SizedBox(
-                              width: 15,
+                              width: 10,
                             ),
                             Text(
                               '-',
-                              style: TextStyle(fontSize: 25),
+                              style: TextStyle(fontSize: 20),
                             ),
                             SizedBox(
-                              width: 20,
+                              width: 15,
                             ),
                             Text(
                               '1',
@@ -226,20 +229,17 @@ class CustomCartCard extends StatelessWidget {
                                   fontSize: 15, fontWeight: FontWeight.bold),
                             ),
                             SizedBox(
-                              width: 20,
+                              width: 15,
                             ),
                             Text(
                               '+',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 18),
                             ),
                             SizedBox(
-                              width: 15,
+                              width: 9,
                             )
                           ]),
                     ),
-                    const SizedBox(
-                      width: 10,
-                    )
                   ],
                 ),
               ),

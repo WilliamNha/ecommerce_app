@@ -19,7 +19,7 @@ class CustomLabelTitle extends StatelessWidget {
         Text(leftTitle,
             style: const TextStyle(
               color: Colors.black,
-              fontSize: 18,
+              fontSize: 17,
               fontWeight: FontWeight.bold,
             )),
         const Spacer(),
