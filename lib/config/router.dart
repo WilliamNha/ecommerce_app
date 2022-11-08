@@ -6,12 +6,12 @@ import 'package:ecommerce_app/modules/home/screen/view_category_detail.dart';
 import 'package:ecommerce_app/modules/home/screen/view_product_detail.dart';
 import 'package:ecommerce_app/modules/on_boarding/screen/on_boarding_screen.dart';
 import 'package:ecommerce_app/modules/order/screen/order_screen.dart';
-import 'package:ecommerce_app/modules/profile/screen/profile_screen.dart';
 import 'package:ecommerce_app/modules/register/screen/get_in.dart';
 import 'package:ecommerce_app/modules/register/screen/sign_in_screen.dart';
 import 'package:ecommerce_app/modules/register/screen/sign_up_screen.dart';
 import 'package:ecommerce_app/modules/splash/screen/splash_screen.dart';
-import 'package:ecommerce_app/modules/wallet/screen/wallet_screen.dart';
+import 'package:ecommerce_app/modules/wallet/screen/choose_payment_screen.dart';
+import 'package:ecommerce_app/modules/wallet/screen/top_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -91,15 +91,15 @@ final GoRouter router = GoRouter(
       },
     ),
     GoRoute(
-      path: '/wallet_screen',
+      path: '/top_up_screen',
       builder: (BuildContext context, GoRouterState state) {
-        return const WalletScreen();
+        return const TopUpScreen();
       },
     ),
     GoRoute(
-      path: '/profile_screen',
+      path: '/choose_payment_screen',
       builder: (BuildContext context, GoRouterState state) {
-        return const ProfileScreen();
+        return const ChoosePaymentScreen();
       },
     ),
   ],

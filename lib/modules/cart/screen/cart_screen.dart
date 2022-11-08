@@ -101,7 +101,7 @@ class CartScreen extends StatelessWidget {
                       ),
                       Expanded(
                         child: CustomSignInButton(
-                          height: 45,
+                          height: 50,
                           onTap: () {},
                           buttonTitle: 'Checkout',
                         ),

@@ -20,7 +20,7 @@ class CustomOrderCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
       width: double.infinity,
-      height: 137,
+      height: 140,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(15)),
       padding: const EdgeInsets.all(15),
@@ -137,8 +137,8 @@ class CustomOrderCard extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20),
                         child: CustomSignInButton(
-                            height: 50,
-                            fontSize: 10,
+                            height: 45,
+                            fontSize: 12,
                             isTextBold: true,
                             onTap: () {},
                             buttonTitle: buttonText),

@@ -3,6 +3,7 @@ import 'package:ecommerce_app/widgets/home/custom_label_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/credit_card_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 
 bool isOrder = true;
 
@@ -51,7 +52,7 @@ class WalletScreen extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  debugPrint('card tab');
+                  context.push('/top_up_screen');
                 },
                 child: CreditCardWidget(
                   isSwipeGestureEnabled: true,
