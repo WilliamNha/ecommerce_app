@@ -74,32 +74,81 @@ List cartItemList = [
       title: 'Werolla Cadigans',
       color: Colors.grey,
       size: 'M',
-      price: '180',
+      price: '180.00',
       image: 'assets/images/home/product/clothes/clothes2.jpeg'),
   CartItemModel(
       title: 'Suga Leather',
       color: Colors.black,
       size: 'S',
-      price: '400',
+      price: '400.00',
       image: 'assets/images/home/product/shoes/shoes2.jpeg'),
   CartItemModel(
       title: 'Vinia Calora',
       color: Colors.orange,
       size: 'M',
-      price: '340',
+      price: '340.00',
       image: 'assets/images/home/product/bags/bag2.jpeg'),
   CartItemModel(
       title: 'Werolla Cadigans',
       color: Colors.green,
       size: 'L',
-      price: '250',
+      price: '250.00',
       image: 'assets/images/home/product/electronic/electronic2.jpeg'),
   CartItemModel(
       title: 'Suga Vangora',
       color: Colors.yellow,
       size: 'L',
-      price: '368',
+      price: '368.00',
       image: 'assets/images/home/product/shoes/shoes3.jpeg'),
+];
+
+List orderItemList = [
+  CartItemModel(
+      title: 'Suga Lim Shoes',
+      color: Colors.grey,
+      size: '41',
+      price: '200.00',
+      image: 'assets/images/home/product/shoes/shoes4.jpeg'),
+  CartItemModel(
+      title: 'Werolla Cardigans',
+      color: Colors.black,
+      size: 'M',
+      price: '375.00',
+      image: 'assets/images/home/product/clothes/clothes5.jpeg'),
+  CartItemModel(
+      title: 'Vinia Headphone',
+      color: Colors.black,
+      price: '340.00',
+      image: 'assets/images/home/product/electronic/electronic6.jpeg'),
+  CartItemModel(
+      title: 'Zonio Super Watch',
+      color: Colors.brown,
+      price: '250.00',
+      image: 'assets/images/home/product/watch/watch1.jpeg'),
+];
+List orderItemListCompleted = [
+  CartItemModel(
+      title: 'Suga Lim Shoes',
+      color: Colors.grey,
+      size: '41',
+      price: '200.00',
+      image: 'assets/images/home/product/shoes/shoes5.jpeg'),
+  CartItemModel(
+      title: 'Werolla Cardigans',
+      color: Colors.blue,
+      size: 'M',
+      price: '375.00',
+      image: 'assets/images/home/product/clothes/clothes6.jpeg'),
+  CartItemModel(
+      title: 'Vinia Headphone',
+      color: Colors.black,
+      price: '340.00',
+      image: 'assets/images/home/product/electronic/electronic3.jpeg'),
+  CartItemModel(
+      title: 'Zonio Super Watch',
+      color: Colors.brown,
+      price: '250.00',
+      image: 'assets/images/home/product/watch/watch6.jpeg'),
 ];
 
 List productModelTypeList = [

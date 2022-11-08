@@ -133,7 +133,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
               const Center(
                 child: Text(
@@ -142,7 +142,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +168,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ],
               ),
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -191,6 +191,9 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   )
                 ],
+              ),
+              const SizedBox(
+                height: 30,
               ),
             ]),
           ),

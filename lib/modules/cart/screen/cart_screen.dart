@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/constants/app_color.dart';
-import 'package:ecommerce_app/widgets/home/custom_cart_card.dart';
+import 'package:ecommerce_app/widgets/cart/custom_cart_card.dart';
 import 'package:ecommerce_app/widgets/register/custom_sign_in_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -34,7 +34,7 @@ class CartScreen extends StatelessWidget {
             ),
           ),
           const Text(
-            'My Cart',
+            'Cart',
             style: TextStyle(
                 color: Colors.black, fontSize: 17, fontWeight: FontWeight.bold),
           )
@@ -56,9 +56,12 @@ class CartScreen extends StatelessWidget {
                       height: 20,
                     ),
                     for (var item in cartItemList)
-                      CustomCartCard(
-                        hasDeleteButton: true,
-                        cartItemModel: item,
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 20),
+                        child: CustomCartCard(
+                          hasDeleteButton: true,
+                          cartItemModel: item,
+                        ),
                       ),
                   ],
                 ),
@@ -98,6 +101,7 @@ class CartScreen extends StatelessWidget {
                       ),
                       Expanded(
                         child: CustomSignInButton(
+                          height: 45,
                           onTap: () {},
                           buttonTitle: 'Checkout',
                         ),

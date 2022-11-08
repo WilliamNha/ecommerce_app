@@ -64,7 +64,7 @@ class _GetYouInScreenState extends State<GetYouInScreen> {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20),
@@ -93,7 +93,7 @@ class _GetYouInScreenState extends State<GetYouInScreen> {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
               CustomSignInButton(
                 buttonTitle: 'Sign in with password',
@@ -102,7 +102,7 @@ class _GetYouInScreenState extends State<GetYouInScreen> {
                 },
               ),
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -125,6 +125,9 @@ class _GetYouInScreenState extends State<GetYouInScreen> {
                     ),
                   )
                 ],
+              ),
+              const SizedBox(
+                height: 30,
               ),
             ],
           ),

@@ -44,6 +44,7 @@ dependencies:
   loading_animation_widget: ^1.2.0+2
   flutter_svg: ^1.1.0
   introduction_screen: ^3.0.2
+  flutter_credit_card: ^3.0.4
 dev_dependencies:
   flutter_test:
     sdk: flutter

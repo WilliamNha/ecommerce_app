@@ -15,7 +15,9 @@ class CustomCartCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.symmetric(
+        horizontal: 20,
+      ),
       width: double.infinity,
       height: 137,
       decoration: BoxDecoration(
@@ -66,7 +68,7 @@ class CustomCartCard extends StatelessWidget {
                                     padding: const EdgeInsets.only(
                                         top: 20, bottom: 20),
                                     width: double.infinity,
-                                    height: 350,
+                                    height: 335,
                                     decoration: const BoxDecoration(
                                         color: Color(0xffF9FAFB),
                                         borderRadius: BorderRadius.only(
