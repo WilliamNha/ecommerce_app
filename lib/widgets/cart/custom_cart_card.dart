@@ -103,7 +103,7 @@ class CustomCartCard extends StatelessWidget {
                                             Expanded(
                                                 child: Padding(
                                               padding: const EdgeInsets.only(
-                                                  left: 20),
+                                                  left: 20, right: 10),
                                               child: GestureDetector(
                                                 onTap: () {
                                                   Navigator.pop(contextx);
@@ -134,9 +134,13 @@ class CustomCartCard extends StatelessWidget {
                                               ),
                                             )),
                                             Expanded(
-                                                child: CustomSignInButton(
-                                              onTap: () {},
-                                              buttonTitle: "Yes, Remove",
+                                                child: Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 10, right: 20),
+                                              child: CustomSignInButton(
+                                                onTap: () {},
+                                                buttonTitle: "Yes, Remove",
+                                              ),
                                             )),
                                           ],
                                         )

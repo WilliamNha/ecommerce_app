@@ -95,11 +95,14 @@ class _GetYouInScreenState extends State<GetYouInScreen> {
               const SizedBox(
                 height: 30,
               ),
-              CustomSignInButton(
-                buttonTitle: 'Sign in with password',
-                onTap: () {
-                  context.push('/sign_in');
-                },
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: CustomSignInButton(
+                  buttonTitle: 'Sign in with password',
+                  onTap: () {
+                    context.push('/sign_in');
+                  },
+                ),
               ),
               const SizedBox(
                 height: 30,
