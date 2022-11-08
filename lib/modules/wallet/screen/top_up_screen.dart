@@ -49,8 +49,7 @@ class _TopUpScreenState extends State<TopUpScreen> {
       body: SizedBox(
         width: double.infinity,
         height: MediaQuery.of(context).size.height,
-        child: SingleChildScrollView(
-            child: Column(mainAxisSize: MainAxisSize.max, children: [
+        child: Column(mainAxisSize: MainAxisSize.max, children: [
           const SizedBox(
             height: 30,
           ),
@@ -124,11 +123,16 @@ class _TopUpScreenState extends State<TopUpScreen> {
                   ),
                 );
               }),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-            child: CustomSignInButton(onTap: () {}, buttonTitle: 'Continue'),
+            child: CustomSignInButton(
+                onTap: () {
+                  context.push('/choose_payment_screen');
+                },
+                buttonTitle: 'Continue'),
           ),
-        ])),
+        ]),
       ),
     );
   }
