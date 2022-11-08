@@ -50,13 +50,17 @@ class _HomeScreenState extends State<HomeScreen> {
               color: AppColor.primaryColor,
               size: 30,
             ),
-            onTap: () {},
+            onTap: () {
+              context.push('/notification_screen');
+            },
           ),
           const SizedBox(
             width: 10,
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              context.push('/favorite_screen');
+            },
             child: const Icon(
               Icons.favorite_outline_rounded,
               color: AppColor.primaryColor,

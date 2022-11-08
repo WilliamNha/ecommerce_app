@@ -1,7 +1,9 @@
 import 'package:ecommerce_app/modules/cart/screen/cart_screen.dart';
 import 'package:ecommerce_app/modules/home/model/home_model.dart';
 import 'package:ecommerce_app/modules/home/screen/bottom_naviation_bar.dart';
+import 'package:ecommerce_app/modules/home/screen/favorite_screen.dart';
 import 'package:ecommerce_app/modules/home/screen/home_screen.dart';
+import 'package:ecommerce_app/modules/home/screen/notification_screen.dart';
 import 'package:ecommerce_app/modules/home/screen/view_category_detail.dart';
 import 'package:ecommerce_app/modules/home/screen/view_product_detail.dart';
 import 'package:ecommerce_app/modules/on_boarding/screen/on_boarding_screen.dart';
@@ -107,6 +109,18 @@ final GoRouter router = GoRouter(
       path: '/profile_screen',
       builder: (BuildContext context, GoRouterState state) {
         return const ProfileScreen();
+      },
+    ),
+    GoRoute(
+      path: '/notification_screen',
+      builder: (BuildContext context, GoRouterState state) {
+        return const NotificationScreen();
+      },
+    ),
+    GoRoute(
+      path: '/favorite_screen',
+      builder: (BuildContext context, GoRouterState state) {
+        return const FavoriteScreenn();
       },
     ),
   ],
