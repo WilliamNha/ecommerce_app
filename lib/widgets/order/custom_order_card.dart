@@ -138,7 +138,7 @@ class CustomOrderCard extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 20),
                         child: CustomSignInButton(
                             height: 45,
-                            fontSize: 10,
+                            fontSize: 12,
                             isTextBold: true,
                             onTap: () {},
                             buttonTitle: buttonText),
