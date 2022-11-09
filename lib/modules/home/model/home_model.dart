@@ -99,7 +99,7 @@ List cartItemList = [
       color: Colors.yellow,
       size: 'L',
       price: '368.00',
-      image: 'assets/images/home/product/shoes/shoes3.jpeg'),
+      image: 'assets/images/home/product/electronic/electronic4.jpeg'),
 ];
 
 List orderItemList = [
@@ -149,18 +149,6 @@ List orderItemListCompleted = [
       color: Colors.brown,
       price: '250.00',
       image: 'assets/images/home/product/watch/watch6.jpeg'),
-];
-
-List productModelTypeList = [
-  allProductModelList,
-  clothesProductModelList,
-  shoesProductModelList,
-  bagsProductModelList,
-  electronicProductModelList,
-  watchProductModelList,
-  jewelryProductModelList,
-  kitchenProductModelList,
-  toyProductModelList,
 ];
 List allProductModelList = [
   ProductModel(
@@ -226,6 +214,68 @@ List allProductModelList = [
     rating: '4.5',
     soldAmount: 70,
     image: 'assets/images/home/product/toys/toy2.jpeg',
+  ),
+];
+
+List productModelTypeList = [
+  allProductModelList,
+  clothesProductModelList,
+  shoesProductModelList,
+  bagsProductModelList,
+  electronicProductModelList,
+  watchProductModelList,
+  jewelryProductModelList,
+  kitchenProductModelList,
+  toyProductModelList,
+];
+List favoriteProductModelList = [
+  ProductModel(
+    title: 'Moco Blue Shoes',
+    description: "New product Arrived",
+    price: 22,
+    rating: '4.8',
+    soldAmount: 502,
+    image: 'assets/images/home/product/shoes/shoes1.jpeg',
+  ),
+  ProductModel(
+    title: 'Werolla Cardigans',
+    description: "New product Arrived",
+    price: 29,
+    rating: '4.5',
+    soldAmount: 70,
+    image: 'assets/images/home/product/jewelry/jewelry2.jpeg',
+  ),
+  ProductModel(
+    title: 'Werolla Cardigans',
+    description: "New product Arrived",
+    price: 29,
+    rating: '4.5',
+    soldAmount: 70,
+    image: 'assets/images/home/product/watch/watch3.jpeg',
+  ),
+  ProductModel(
+    title: 'Werolla Cardigans',
+    description: "New product Arrived",
+    price: 29,
+    rating: '4.5',
+    soldAmount: 70,
+    image: 'assets/images/home/product/watch/watch1.jpeg',
+  ),
+  ProductModel(
+    title: 'Werolla Cardigans',
+    description: "New product Arrived",
+    price: 29,
+    rating: '4.5',
+    soldAmount: 70,
+    image: 'assets/images/home/product/electronic/electronic4.jpeg',
+  ),
+  ProductModel(
+    title: 'Werolla Cardigans',
+    description: "New product Arrived",
+    price: 29,
+    rating: '4.5',
+    soldAmount: 70,
+    image: 'assets/images/home/product/electronic/electronic3.jpeg',
   ),
 ];
 

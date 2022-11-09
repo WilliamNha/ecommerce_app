@@ -1,3 +1,5 @@
+import 'package:ecommerce_app/modules/home/model/home_model.dart';
+import 'package:ecommerce_app/widgets/home/custom_product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -29,17 +31,40 @@ class FavoriteScreenn extends StatelessWidget {
       body: SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              width: double.infinity,
-              height: 86,
-              color: Colors.grey,
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20, bottom: 20),
+                child: GridView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisExtent: 270,
+                      mainAxisSpacing: 15,
+                      crossAxisSpacing: 15),
+                  itemCount: favoriteProductModelList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return GestureDetector(
+                      onTap: () {
+                        context.push('/view_product_detail',
+                            extra: favoriteProductModelList[index]);
+                      },
+                      child: CustomCardProduct(
+                        isFavoriteClicked: true,
+                        productModel: favoriteProductModelList[index],
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

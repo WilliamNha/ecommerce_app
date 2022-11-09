@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 
 class CustomCardProduct extends StatefulWidget {
   final ProductModel productModel;
+  bool isFavoriteClicked;
 
-  const CustomCardProduct({
+  CustomCardProduct({
+    this.isFavoriteClicked = false,
     Key? key,
     required this.productModel,
   }) : super(key: key);
@@ -15,7 +17,6 @@ class CustomCardProduct extends StatefulWidget {
 }
 
 class _CustomCardProductState extends State<CustomCardProduct> {
-  bool isFavoriteClicked = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -52,7 +53,7 @@ class _CustomCardProductState extends State<CustomCardProduct> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        isFavoriteClicked = !isFavoriteClicked;
+                        widget.isFavoriteClicked = !widget.isFavoriteClicked;
                       });
                     },
                     child: Container(
@@ -62,7 +63,7 @@ class _CustomCardProductState extends State<CustomCardProduct> {
                           shape: BoxShape.circle,
                           color: const Color(0xff005555).withOpacity(0.4),
                         ),
-                        child: isFavoriteClicked
+                        child: widget.isFavoriteClicked
                             ? Icon(
                                 Icons.favorite,
                                 color: Colors.red.shade400,
