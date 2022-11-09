@@ -2,7 +2,6 @@ import 'package:ecommerce_app/constants/app_color.dart';
 import 'package:ecommerce_app/widgets/home/custom_label_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/credit_card_widget.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 bool isOrder = true;
@@ -27,13 +26,13 @@ class WalletScreen extends StatelessWidget {
         leadingWidth: 220,
         leading: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
-            child: SvgPicture.asset(
-              'assets/images/splash/logo.svg',
-              width: 21,
-              height: 21,
-            ),
-          ),
+              padding:
+                  const EdgeInsets.only(top: 5, bottom: 5, left: 15, right: 10),
+              child: Image.asset(
+                'assets/icon/shop_ez_logo.png',
+                width: 35,
+                height: 35,
+              )),
           const Text(
             'Wallet',
             style: TextStyle(

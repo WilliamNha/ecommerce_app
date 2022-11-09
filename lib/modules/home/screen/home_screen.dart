@@ -7,7 +7,6 @@ import 'package:ecommerce_app/widgets/home/custom_product_card.dart';
 import 'package:ecommerce_app/widgets/home/offer_slider.dart';
 import 'package:ecommerce_app/widgets/home/search_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -29,17 +28,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
-        leadingWidth: 100,
+        // titleSpacing: 0,
+
         leading: Padding(
-          padding: const EdgeInsets.only(left: 10, top: 12, bottom: 12),
+          padding: const EdgeInsets.only(left: 20, top: 2, bottom: 2),
           child: SizedBox(
-            // width: 80,
-            height: 20,
-            // color: Colors.black12,
-            child: SvgPicture.asset(
-              'assets/images/splash/logo.svg',
-            ),
-          ),
+              // width: 80,
+              height: 80,
+              // color: Colors.black12,
+              child: Image.asset('assets/icon/shop_ez_logo.png')),
         ),
         elevation: 0,
         backgroundColor: Colors.white,

@@ -2,7 +2,6 @@ import 'package:ecommerce_app/constants/app_color.dart';
 import 'package:ecommerce_app/widgets/cart/custom_cart_card.dart';
 import 'package:ecommerce_app/widgets/register/custom_sign_in_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../home/model/home_model.dart';
 
@@ -26,13 +25,13 @@ class CartScreen extends StatelessWidget {
         leadingWidth: 210,
         leading: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
-            child: SvgPicture.asset(
-              'assets/images/splash/logo.svg',
-              width: 21,
-              height: 21,
-            ),
-          ),
+              padding:
+                  const EdgeInsets.only(top: 5, bottom: 5, left: 15, right: 10),
+              child: Image.asset(
+                'assets/icon/shop_ez_logo.png',
+                width: 35,
+                height: 35,
+              )),
           const Text(
             'Cart',
             style: TextStyle(

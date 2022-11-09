@@ -1,7 +1,6 @@
 import 'package:ecommerce_app/widgets/profile/custom_row_profile_button.dart';
 import 'package:ecommerce_app/widgets/profile/profile_part.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -13,13 +12,13 @@ class ProfileScreen extends StatelessWidget {
         leadingWidth: 210,
         leading: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
-            child: SvgPicture.asset(
-              'assets/images/splash/logo.svg',
-              width: 21,
-              height: 21,
-            ),
-          ),
+              padding:
+                  const EdgeInsets.only(top: 5, bottom: 5, left: 15, right: 10),
+              child: Image.asset(
+                'assets/icon/shop_ez_logo.png',
+                width: 35,
+                height: 35,
+              )),
           const Text(
             'Profile',
             style: TextStyle(

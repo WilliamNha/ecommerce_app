@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -25,7 +24,11 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20),
-          child: SvgPicture.asset('assets/images/splash/logo.svg'),
+          child: Image.asset(
+            'assets/icon/shop_ez_logo.png',
+            width: 200,
+            height: 200,
+          ),
         ),
       ),
     );

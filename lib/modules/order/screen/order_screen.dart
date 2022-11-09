@@ -2,7 +2,6 @@ import 'package:ecommerce_app/constants/app_color.dart';
 import 'package:ecommerce_app/modules/home/model/home_model.dart';
 import 'package:ecommerce_app/widgets/order/custom_order_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 TabBar get _tabBar => const TabBar(
         indicatorWeight: 3,
@@ -58,13 +57,13 @@ class OrderScreen extends StatelessWidget {
           leadingWidth: 210,
           leading: Row(mainAxisAlignment: MainAxisAlignment.start, children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
-              child: SvgPicture.asset(
-                'assets/images/splash/logo.svg',
-                width: 21,
-                height: 21,
-              ),
-            ),
+                padding: const EdgeInsets.only(
+                    top: 5, bottom: 5, left: 15, right: 10),
+                child: Image.asset(
+                  'assets/icon/shop_ez_logo.png',
+                  width: 35,
+                  height: 35,
+                )),
             const Text(
               'Orders',
               style: TextStyle(
